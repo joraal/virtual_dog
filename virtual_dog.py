@@ -24,6 +24,7 @@ def get_dog_file(full_file):
 def play_in_folders(folder):
     # all_matches = []
     #print(folder)
+
     items = os.listdir(folder)
 
     for item in items:
@@ -56,6 +57,9 @@ def play_in_folders(folder):
 def main():
     print_headers()
     folder = "dogfiles"
+    base_folder = os.path.dirname(__file__)
+    folder = os.path.join(base_folder, folder)
+    print(folder)
     filepath = os.path.abspath(folder)
 
     print(filepath)
